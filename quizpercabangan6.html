@@ -1,0 +1,28 @@
+Buatkanlah program yang meminta pengguna untuk memasukkan sebuah angka (1-12), Outputnya adalah nama-nama bulan pada kalender islam dan tampilkan nama bulan yang sesuai angka di input.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalender Islam</title>
+</head>
+<body>
+    <script>
+
+        const bulanIslam = [
+            "Muharram", "Safar", "Rabi'ul Awal", "Rabi'ul Akhir",
+            "Jumadil Awal", "Jumadil Akhir", "Rajab", "Sya'ban",
+            "Ramadhan", "Syawal", "Dzulqa'dah", "Dzulhijjah"
+        ];
+
+       
+        const angka = prompt("Masukkan angka (1-12):");
+
+        
+        if (angka >= 1 && angka <= 12) {
+            alert("Bulan ke-" + angka + " adalah: " + bulanIslam[angka - 1]);
+        } else {
+            alert("Input tidak valid. Masukkan angka antara 1 hingga 12.");
+        }
+    </script>
+</body>
+</html>

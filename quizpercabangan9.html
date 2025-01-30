@@ -1,0 +1,33 @@
+Buatkanlah program dengan JavaScript untuk mengecek apakah suatu tahun adalah tahun kabisat atau bukan. (Tahun kabisat adalah tahun yang habis dibagi 4, kecuali tahun yang habis dibagi 100 tetapi bukan kelipatan 400). 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cek Tahun Kabisat</title>
+</head>
+<body>
+    <h1>Cek Tahun Kabisat</h1> 
+    <label for="tahun">Masukkan Tahun:</label> /*dengan bantuan AI */
+    <input type="number" id="tahun" placeholder="Contoh: 2025"> /*dengan bantuan AI */
+    <br>
+    <button onclick="cekTahunKabisat()">Cek</button> /*dengan bantuan AI */
+    <h2 id="hasil"></h2>
+
+    <script>
+        function cekTahunKabisat() {
+            
+            var tahun = document.getElementById("tahun").value;
+
+            
+            var kabisat = (tahun % 4 === 0 && tahun % 100 !== 0) || (tahun % 400 === 0);
+
+            
+            if (kabisat) {
+                document.getElementById("hasil").innerText = tahun + " adalah tahun kabisat."; /*dengan bantuan AI */
+            } else {
+                document.getElementById("hasil").innerText = tahun + " bukan tahun kabisat."; /*dengan bantuan AI */ 
+            }
+        }
+    </script>
+</body>
+</html>

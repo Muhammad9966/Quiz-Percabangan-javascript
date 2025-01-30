@@ -1,0 +1,39 @@
+Buatkanlah program untuk menghitung diskon berdasarkan total belanja. Jika total belanja lebih dari 500.000, diskon 10%; jika lebih dari 1.500.000, diskon 15%.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hitung Diskon</title>
+</head>
+<body>
+    <h1>Hitung Diskon</h1>
+    <label for="totalBelanja">Total Belanja:</label>
+    <input type="number" id="totalBelanja" placeholder="Masukkan total belanja"> /*dengan bantuan AI */
+    <br>
+    <button onclick="hitungDiskon()">Hitung Diskon</button> /*dengan bantuan AI */
+    <h2>Diskon: <span id="diskon">0</span></h2> /*dengan bantuan AI */
+    <h2>Total Setelah Diskon: <span id="totalSetelahDiskon">0</span></h2> /*dengan bantuan AI */
+
+    <script>
+        function hitungDiskon() {
+           
+            var totalBelanja = parseFloat(document.getElementById("totalBelanja").value);
+            var diskon = 0;
+
+            
+            if (totalBelanja > 1500000) {
+                diskon = totalBelanja * 0.15; 
+            } else if (totalBelanja > 500000) {
+                diskon = totalBelanja * 0.10;
+            }
+
+            
+            var totalSetelahDiskon = totalBelanja - diskon;
+
+           
+            document.getElementById("diskon").innerText = diskon.toFixed(2);
+            document.getElementById("totalSetelahDiskon").innerText = totalSetelahDiskon.toFixed(2);
+        }
+    </script>
+</body>
+</html>

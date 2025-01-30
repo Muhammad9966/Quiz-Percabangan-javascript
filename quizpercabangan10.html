@@ -1,0 +1,33 @@
+Buatkanlah program sederhana dengan JavaScript untuk menentukan apakah suatu angka positif, negatif, atau nol. silahkan bisa pilih output di console atau browser!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cek Angka</title>
+</head>
+<body>
+    <h1>Cek Angka Positif, Negatif, atau Nol</h1>
+    <button onclick="cekAngka()">Cek Angka</button> /*dengan bantuan AI */
+    <h2 id="hasil"></h2>
+
+    <script>
+        function cekAngka() {
+            
+            var angka = parseFloat(prompt("Masukkan angka:")); /*dengan bantuan AI */
+
+            
+            var hasil;
+            if (angka > 0) {
+                hasil = angka + " adalah angka positif."; 
+            } else if (angka < 0) {
+                hasil = angka + " adalah angka negatif.";
+            } else {
+                hasil = "Angka tersebut adalah nol.";
+            }
+
+            
+            document.getElementById("hasil").innerText = hasil;
+        }
+    </script>
+</body>
+</html>
